@@ -1,0 +1,17 @@
+{
+    "name": "Areas, Perimetros y Volumenes de Figuras",
+    "short_name": "APVF",
+    "theme_color": "#2196f3",
+    "background_color": "#2196f3",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "./1.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}

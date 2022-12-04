@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="manifest" href="./manifest.json">
+  <script type="text/javascript">
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Areas, Perimetros y Volumes de las figuras</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: HeroBiz - v2.3.1
+  * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <script src="formulas.js"></script>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>APVF<span>.</span></h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+
+          <li><a class="nav-link scrollto" href="index.html">Inicio</a></li>
+          <li class="dropdown megamenu"><a href="#"><span>Areas y Perimetros</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li>
+                <a href="cuadrado.html">Cuadrado</a>
+                <a href="triangulo.html">Triangulo</a>
+                <a href="rectangulo.html">Rectangulo</a>
+                <a href="paralelogramo.html">Paralelogramo</a>
+                <a href="rombo.html">Rombo</a>
+                <a href="cometa.html">Cometa</a>
+              </li>
+              <li>
+                <a href="trapecio.html">Trapecio</a>
+                <a href="circulo.html">Circulo</a>
+                <a href="poligonoregular.html">Poligono Regular</a>
+                <a href="coronacircular.html">Corona Circular</a>
+                <a href="sectorcircular.html">Sector Circular</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown megamenu"><a href="#"><span>Volumenes y Areas</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li>
+                <a href="cubo.html">Cubo</a>
+                <a href="cilindro.html">Cilindro</a>
+                <a href="ortoedro.html">Ortoedro</a>
+                <a href="prismarecto.html">Prisma Recto</a>
+                <a href="cono.html">Cono</a>
+              </li>
+              <li>
+                <a href="troncocono.html">Tronco de Cono</a>
+                <a href="esfera.html">Esfera</a>
+                <a href="piramide.html">Piramide</a>
+                <a href="tatraedro.html">Tatraedro</a>
+                <a href="octaedroregular.html">Octaedro Regular</a>
+              </li>
+            </ul>
+          </li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle d-none"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative"
+      data-aos="zoom-out">
+      <h2><span> Paralelogramo</span></h2>
+      <h4>Formula</h4>
+      <img src="./formulas/paralelogramo.png" class="img-fluid animated">
+
+      <div class="p-3 border bg-light">Calculadora<br />
+
+        <input type="number" id="ladoa" placeholder="Lado A"><br/>
+        <input type="number" id="ladob" placeholder="Lado B"><br/>
+        <input type="number" id="altura" placeholder="Altura(h)"><br/>
+        <br />
+        <button onclick="Obtenerparalelogramo()">Calcular</button>
+        <br />
+        <label>Área: </label>
+        <div id="areaResultado">
+        </div>
+        <label>Perimetro: </label>
+        <div id="perimetroResultado">
+        </div>
+
+      </div><br/>
+      <div class="d-flex">
+        <a href="./videos/apparalelogramo.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i
+            class="bi bi-play-circle"></i><span>Perimetros y Areas</span></a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
